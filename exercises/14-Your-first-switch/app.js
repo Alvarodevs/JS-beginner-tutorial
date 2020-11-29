@@ -1,14 +1,21 @@
 function getColor(selection)
 {
 	switch(selection){
-		// Add more options here
+        case "red":
+            return true; 
+            break;
+        case "green":
+            return true;
+            break;
+        case "blue":
+            return true;
+            break;
 	    default:
-	    	return false;  //returns false because the user picked an unavailable color
+	    	return false;
 	    break;               
 	}
 }
-
-var colorname = window.prompt('What color do you want?');
+var colorname = window.prompt('What color do you want?').toLowerCase();
 var isAvailable = getColor(colorname);
 
 if(isAvailable)
